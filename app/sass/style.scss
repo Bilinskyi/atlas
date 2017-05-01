@@ -151,7 +151,15 @@
 	}
 	&_position {
 		top: 23px;
+		.hamburger {
+			background-color: #fff;
+		}
 	} 
+	@media #{$bp-small} {
+		
+		top: 15px;
+	    right: 10px;
+	}
 
 }
 
@@ -204,8 +212,9 @@ input#activate {
 
 	padding-top: 125px;
 	width: 455px;
-	@media #{$bp-small} {
-		width: auto;
+	@media #{$bp-medium} {
+	      width: auto;
+	      padding-top: 50px;
 	}
 
 	&__item {
@@ -219,11 +228,11 @@ input#activate {
 		font-family: $raleway;
 		font-size: 21px;
 		font-weight: 600;
-		@media #{$bp-small} {
+		@media #{$bp-medium} {
 			font-size: 16px;
-			padding: 10px 10px 10px 30px;
+			padding: 7px 10px 7px 30px;
 		}
-		@media #{$bp-xsmall} {
+		@media #{$bp-small} {
 			font-size: 14px;
 		}
 		&_active {
@@ -283,6 +292,7 @@ input#activate {
 	}
 	@media #{$bp-small} {
 		padding-bottom: 50px;
+		padding-top: 60px;
 	}
 	i {
 		display: inline-block;
@@ -1446,7 +1456,6 @@ input#activate {
 	@media #{$bp-large} {
 		max-width: 80%;
 		margin: 50px 0;
-		display: block;
 	}
 	@media #{$bp-small} {
 		max-width: 80%;
@@ -1730,6 +1739,7 @@ input#activate {
 }
 
 .lead-client-padding {
+
 	@media #{$min-s} {
 		padding-left: 100px; 
 	}
@@ -1738,6 +1748,16 @@ input#activate {
 	}
 	@media #{$bp-small} {
 		padding-left: 0;
+	}
+	.title {
+		@media #{$bp-large} {
+		      font-size: 20px;
+		}
+	}
+	.lead-client-text {
+		@media #{$bp-large} {
+		      font-size: 14px;
+		}
 	}
 }
 
