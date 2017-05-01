@@ -19,37 +19,66 @@
 
 
 
-.circle-svg {
-	stroke-dasharray: 1000;
-	stroke-dashoffset: 1000;
-	animation-name: dash;
-	animation-duration: 40000ms;
-	animation-timing-function: linear;
-	animation-iteration-count: 5;
-	animation-delay: 0s;
-	animation-fill-mode: forwards;
-}
 
 @keyframes dash {
-	from {
-		stroke-dashoffset: 1000;
-	}
 	to {
 		stroke-dashoffset: 0;
 	}
+}
+
+.circle-svg,
+.circle-svg-lg {
+	opacity: 0;
 }
 
 
 .circle-js {
 	width: 24px;
 	height: 24px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	&.anim {
+		.circle-svg {
+			opacity: 1;
+			animation-duration: 4s;
+			animation-name: dash;
+			animation-delay: 0s;
+			animation-iteration-count: 1;
+			animation-timing-function: linear;
+			animation-fill-mode: forwards;
+
+			stroke-dasharray: 76;
+			stroke-dashoffset: 76;
+		}
+
+	}
+}
+
+.circle-js-lg {
+	width: 112px;
+	height: 112px;
 
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	&.anim {
+		.circle-svg-lg {
+			opacity: 1;
+			animation-duration: 3.5s;
+			animation-name: dash;
+			animation-delay: 0s;
+			animation-iteration-count: 1;
+			animation-timing-function: linear;
+			animation-fill-mode: forwards;
+			
+			stroke-dasharray: 352;
+			stroke-dashoffset: 352;
+		}
+	}
 }
-
 
 
 
