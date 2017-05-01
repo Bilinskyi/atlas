@@ -72,7 +72,7 @@
 	max-height: 100%;
 }
 
-#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+#fancybox-loading, .fancybox-prev span, .fancybox-next span {
 	background-image: url('../img/fancybox/fancybox_sprite.png');
 }
 
@@ -96,33 +96,23 @@
 
 .fancybox-close {
 	position: absolute;
-	top: 0;
+	bottom: 100%;
+	margin-bottom: 10px;
 	left: 100%;
-	margin-left: 10px;
-	width: 30px;
-	height: 30px;
-	// background: $color2;
+	margin-left: 25px;
+	width: 32px;
+	height: 32px;
 	cursor: pointer;
 	z-index: 8040;
+	background: url(../img/fancybox/close.svg) center top no-repeat;
+	background-size: 100% 100%;	
 	@media #{$bp-small} {
-	      margin-left: 0;
-	      right: 0;
-	      left: auto;
-	      bottom: 100%;
-	      top: auto;
+		margin-left: 0;
+		right: 0;
+		left: auto;
+		bottom: 100%;
 	}
-	&::after {
-		content: '\e904';
-		font-family: 'icomoon';
-		position: absolute;
-		display: block;
-		width: 100%;
-		text-align: center;
-		font-size: 15px;
-		color: #fff;
-		top: 50%;
-		transform: translateY(-50%);
-	}
+
 	&:hover {
 		// background: $color2-h;	
 		&:after {

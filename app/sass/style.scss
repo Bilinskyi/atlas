@@ -680,7 +680,8 @@ input#activate {
 }
 
 .visual-project,
-.bg-form {
+.bg-form,
+.form-popup {
 	.form {
 		padding-top: 66px;
 		@media #{$bp-large} {
@@ -1284,6 +1285,12 @@ input#activate {
 		position: relative;
 		padding-left: 37px;
 		margin: 10px 0;
+		@media #{$bp-small} {
+		      font-size: 15px;
+		}
+		@media #{$bp-xsmall} {
+		      font-size: 13px;
+		}
 		i {
 			display: inline-block;
 			position: absolute;
